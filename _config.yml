@@ -4,19 +4,20 @@
 
 # Site
 title: life is beautiful！
-subtitle: 子标题
-description: 描述
-keywords: 关键字
+subtitle:
+description:
+keywords:
 author: 杜致远
-language: zh
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.duzy.top/blog
 root: /blog/
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink: :title/
+#permalink: :year/:month/:day/:title/
+permalink_defaults: :title/
 
 # Directory
 source_dir: source
@@ -36,7 +37,7 @@ external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
-relative_link: false
+relative_link: true
 future: true
 highlight:
   enable: true
@@ -81,4 +82,4 @@ deploy:
   type: git
   repo:
   branch:
-  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+  message: Site updated:{{ now('YYYY-MM-DD HH:mm:ss') }}
